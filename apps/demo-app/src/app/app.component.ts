@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'angular-example-root',
+  selector: 'apt-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
 })
