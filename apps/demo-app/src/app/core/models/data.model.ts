@@ -12,22 +12,23 @@ export enum State {
     DONE
 }
 
-export interface Right {
-    create: boolean,
-    update: boolean,
-    delete: boolean,
-    select: boolean
+export enum Right {
+    SELECT,
+    CREATE,
+    UPDATE,
+    DELETE,
 }
 
-export interface Profile extends Id {
-    name: string,
-    rights: Map<RightType, Right>
+export interface Profile {
+    profile ?: Right,
+    user ?: Right,
+    task ?: Right
 }
 
 export interface User extends Id {
     name: string,
-    password: string,
-    profile?: Profile | number // profile existant si et si seulement le compte a bien été crée 
+    password ?: string ,
+    profile?: Profile 
 }
 
 export interface Task extends Id {
